@@ -10,7 +10,7 @@
 (defn compare-all-sorts []
   (bubble/bubble-sort-rand bubble*)
   (merge/merge-sort-rand merge*)
-  (print "Clojure sort: Number of elements:" (util/pprint-number clojure) "|| ")
+  (print "Clojure sort: Number of elements:" (util/pprint-integer clojure) "|| ")
   (let [s (shuffle (range clojure))]
     (time (sort s))
     nil))

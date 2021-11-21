@@ -6,7 +6,7 @@
   (let [len-- (dec (count s))
         shuffled-seq (transient s)]
     (time
-      (do (print "Bubble sort fast || Num elements:" (util/pprint-number (count s)) "|| ")
+      (do (print "Bubble sort fast || Num elements:" (util/pprint-integer (count s)) "|| ")
           (loop [i 0
                  j 0
                  s shuffled-seq]

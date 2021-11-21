@@ -1,7 +1,7 @@
 (ns sorting.util
   (:require [clojure.string :as str]))
 
-(defn pprint-number [n]
+(defn pprint-integer [n]
   (loop [remaining (-> n str str/reverse)
          ret []
          i 0]

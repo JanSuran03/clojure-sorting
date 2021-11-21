@@ -42,13 +42,13 @@
 (defn merge-sort-rand
   [size]
   (let [size (int size)]
-    (print "Merge sort: Number of elements: " (util/pprint-number size) "|| ")
+    (print "Merge sort: Number of elements: " (util/pprint-integer size) "|| ")
     (time (merge-sort* (shuffle (range size))))
     nil))
 
 (defn merge-sort
   [s]
-  (print "Merge sort: Number of elements: " (util/pprint-number (count s)) "|| ")
+  (print "Merge sort: Number of elements: " (util/pprint-integer (count s)) "|| ")
   (time (merge-sort* s)))
 
 (defn compare-sort-and-my-trash-sort [size]
