@@ -11,17 +11,17 @@
                  j 0
                  s shuffled-seq]
             (cond (= i len--) (persistent! s)
-                  (= j len--) (recur (inc i)
+                  (= j len--) (recur (unchecked-inc-int i)
                                      0
                                      s)
                   :else (let [cur (nth s j)
-                              cur++ (nth s (inc j))
+                              cur++ (nth s (unchecked-inc-int j))
                               s (if (> cur cur++)
                                   (assoc! s j cur++
-                                          (inc j) cur)
+                                          (unchecked-inc-int j) cur)
                                   s)]
                           (recur i
-                                 (inc j)
+                                 (unchecked-inc-int j)
                                  s))))
           nil))))
 
