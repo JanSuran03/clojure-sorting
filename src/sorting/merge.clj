@@ -24,9 +24,9 @@
 
             (seq v1)
             (persistent! (reduce conj!
-                                 ret
-                                 v1))
-            (seq v2)
+                                   ret
+                                   v1))
+            :else
             (persistent! (reduce conj!
                                  ret
                                  v2))))
